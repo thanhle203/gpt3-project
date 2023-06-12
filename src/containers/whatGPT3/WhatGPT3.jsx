@@ -2,6 +2,24 @@ import React from 'react';
 import './whatgpt3.css';
 import { Feature } from '../../components';
 
+const whatgpt3Data = [
+  {
+    id: 1,
+    title: 'Chatbots',
+    text: 'GPT-3 can be used to create powerful chatbots where you are able to have a conversation about anything and everything with it.',
+  },
+  {
+    id: 2,
+    title: 'Knowledge Base',
+    text: 'GPT-3 can access and utilize information stored within a knowledge base to enhance its responses and generate more accurate and contextually relevant output.',
+  },
+  {
+    id: 3,
+    title: 'Education',
+    text: 'GPT-3 can have several applications in the field of education. Some ways are Personalized Learning, Language Learning, Question-Answering/Homework help, etc..',
+  },
+]
+
 const whatGPT3 = () => {
   return (
     <div className='gpt3__whatgpt3 section__margin' id='wgpt3'>
@@ -13,9 +31,9 @@ const whatGPT3 = () => {
         <p>Explore The Library</p>
       </div>
       <div className='gpt3__whatgpt3-container'>
-        <Feature title="Chatbots" text="GPT-3 can be used to create powerful chatbots where you are able to have a conversation about anything and everything with it."/>
-        <Feature title="Knowledge Base" text="GPT-3 can access and utilize information stored within a knowledge base to enhance its responses and generate more accurate and contextually relevant output."/>
-        <Feature title="Education" text="GPT-3 can have several applications in the field of education. Some ways are Personalized Learning, Language Learning, Question-Answering/Homework help, etc.."/>    
+        {whatgpt3Data.map((item) => 
+        <Feature title={item.title} text={item.text} key={item.id} />
+        )}
       </div>
     </div>
   )

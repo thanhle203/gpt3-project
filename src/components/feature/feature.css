@@ -51,12 +51,17 @@
 }
 
 @media screen and (max-width: 550px) {
+    .gpt3__features-container__feature {
+        flex-direction: column;
+    }
+
     .gpt3__features-container__feature-title h1 {
-        font-size: 14px;
+        padding-bottom: 0.5rem;
+        font-size: 16px;
         line-height: 22px;
     }
 
-    .gpt3__features-container__feature-title p {
+    .gpt3__features-container__feature-text p {
         font-size: 12px;
         line-height: 20px;
     }
